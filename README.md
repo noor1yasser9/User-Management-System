@@ -260,9 +260,3 @@ chmod -R 775 storage bootstrap/cache
 - ✅ SQL injection prevention (Eloquent ORM)
 - ✅ XSS protection (Blade escaping)
 - ✅ Authentication middleware
-
-## Support
-
-For any issues or questions, please contact the development team.
-
----
