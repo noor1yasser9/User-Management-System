@@ -157,7 +157,7 @@ Open your browser and navigate to:
 - **Password**: 123456
 
 ## Project Structure
-
+```
 laravel-project/
 ├── app/
 │   ├── Http/Controllers/     # Controllers for handling requests
@@ -173,7 +173,7 @@ laravel-project/
 ├── routes/
 │   └── web.php              # Application routes
 └── lang/                     # Translations (ar, en)
-
+```
 ## Available Routes
 
 ### Authentication
