@@ -32,14 +32,18 @@ Route::prefix('{locale}')->where(['locale' => 'ar|en'])->group(function () {
     Route::middleware(['auth'])->group(function () {
 
         // Users routes
-        Route::get('/users', [UserController::class, 'index'])->name('users.index');
-        Route::get('/users/list', [UserController::class, 'list'])->name('users.list');
-        Route::post('/users', [UserController::class, 'store'])->name('users.store');
-        Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
-        Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+        Route::prefix('users')->name('users.')->controller(UserController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/list', 'list')->name('list');
+            Route::post('/', 'store')->name('store');
+            Route::put('/{id}', 'update')->name('update');
+            Route::delete('/{id}', 'destroy')->name('destroy');
+        });
 
         // Logs routes
-        Route::get('/logs', [LogController::class, 'index'])->name('logs.index');
-        Route::get('/logs/list', [LogController::class, 'list'])->name('logs.list');
+        Route::prefix('logs')->name('logs.')->controller(LogController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/list', 'list')->name('list');
+        });
     });
 });
