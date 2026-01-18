@@ -42,22 +42,14 @@ mysql --version
 
 ## Installation Steps
 
-### 1. Clone or Extract the Project
+### 1. Clone the Project
 
 ```bash
-cd /path/to/your/projects
-# If using git:
-git clone <repository-url>
-# Or extract the ZIP file to this location
+git clone https://github.com/noor1yasser9/User-Management-System.git
+cd User-Management-System
 ```
 
-### 2. Navigate to Project Directory
-
-```bash
-cd laravel-project
-```
-
-### 3. Install PHP Dependencies
+### 2. Install PHP Dependencies
 
 ```bash
 composer install
@@ -65,19 +57,19 @@ composer install
 
 This will install all Laravel and PHP packages defined in `composer.json`.
 
-### 4. Install Frontend Dependencies
+### 3. Install Frontend Dependencies
 
 ```bash
 npm install
 ```
 
-### 5. Create Environment File
+### 4. Create Environment File
 
 ```bash
 cp .env.example .env
 ```
 
-### 6. Configure Database
+### 5. Configure Database
 
 Open the `.env` file and update the database settings:
 
@@ -92,7 +84,7 @@ DB_PASSWORD=your_password_here
 
 Replace `your_password_here` with your MySQL root password.
 
-### 7. Create Database
+### 6. Create Database
 
 Open MySQL command line or phpMyAdmin and create the database:
 
@@ -106,13 +98,13 @@ Or using command line:
 mysql -u root -p -e "CREATE DATABASE offer_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 ```
 
-### 8. Generate Application Key
+### 7. Generate Application Key
 
 ```bash
 php artisan key:generate
 ```
 
-### 9. Run Database Migrations
+### 8. Run Database Migrations
 
 ```bash
 php artisan migrate
@@ -120,7 +112,7 @@ php artisan migrate
 
 This will create all necessary tables (users, logs, migrations, etc.).
 
-### 10. Seed Database with Sample Data (Optional)
+### 9. Seed Database with Sample Data (Optional)
 
 ```bash
 php artisan db:seed
@@ -132,7 +124,7 @@ This will create a default admin user:
 - **Username**: noor1yasser9
 - **Password**: 123456
 
-### 11. Build Frontend Assets
+### 10. Build Frontend Assets
 
 ```bash
 npm run build
@@ -144,7 +136,7 @@ For development with hot reload:
 npm run dev
 ```
 
-### 12. Start the Development Server
+### 11. Start the Development Server
 
 ```bash
 php artisan serve
@@ -152,7 +144,7 @@ php artisan serve
 
 The application will be available at: **<http://127.0.0.1:8000>**
 
-### 13. Access the Application
+### 12. Access the Application
 
 Open your browser and navigate to:
 
