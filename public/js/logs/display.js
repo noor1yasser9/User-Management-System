@@ -58,8 +58,8 @@ function loadLogs(page = currentPage) {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                renderLogsTable(data.data);
-                renderPagination(data.pagination);
+                renderLogsTable(data.data.data);
+                renderPagination(data.data.pagination);
             }
         })
         .catch(error => {
